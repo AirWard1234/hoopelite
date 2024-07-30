@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+* {
+  margin: 0;
+}
+
+.background {
+  position: absolute;
+  margin: 0;
+}
+
+.background img {
+  display: grid;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.infopop {
+  width: 25vw;
+  height: 40vh;
+  background-color: lightblue;
+  display: flex;
+  position: absolute;
+  transform: translateY(70%) translateX(150%);
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+}
+
+.infopop h1 {
+  font-family: "Montserrat", sans-serif;
+  margin: 20px;
+}
+
+.infopop p {
+  font-family: "Montserrat", sans-serif;
+  width: 70%;
+  margin-bottom: 10vh;
+}
+
+.infopop .closepop {
+  width: 25%;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: red;
+}
+
+.infopop .closepop:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 5px;
+  margin-bottom: 15vh;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.gameMonitor {
+  width: 50%;
+  height: 40vh;
+  background-color: #ababa6;
+  display: flex;
+  flex-direction: column;
+  margin-left: 27vw;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: translateY(80%) translateX(-3%);
+  opacity: 70%;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.dice-container {
+  display: flex;
+  background-color: #F5F5DC;
+  height: 20vh;
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+  opacity: 100%;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+.dice-dot {
+  --top: 0%;
+  --left: 0%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  transform: translateX(cal(vart(--left) *-1)) translateY(cal(vart(--top) *-1));
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn-roll-dice {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 15px;
+}
+
+.btn-roll-dice:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-roll-dice:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-roll-dice::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-roll-dice::after {
+  background-color: #fff;
+}
+
+.btn-roll-dice:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+#view {
+  margin-top: 30px;
+}
+
+#mazeContainer {
+  top: 15px;
+  opacity: 0;
+  display: inline-block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#mazeContainer #mazeCanvas {
+  margin: 0;
+  display: block;
+  border: solid 2px black;
+  height: 400px;
+}
+
+input,
+select {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.30);
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+}
+
+input:hover,
+select:hover {
+  background-color: rgba(0, 0, 0, 0.70);
+}
+
+input:active,
+select:active {
+  background-color: black;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.custom-select {
+  display: inline-block;
+}
+
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: 125px center;
+}
+
+#page {
+  text-align: center;
+  height: auto;
+  width: auto;
+  display: none;
+  position: absolute;
+  margin-left: 40vw;
+  transform: translateY(-50%);
+}
+
+#page #menu {
+  margin: auto;
+  padding: 10px;
+  height: 65px;
+  box-sizing: border-box;
+}
+
+#page #menu h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+#page #view {
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 10px black solid;
+  border-radius: 10px;
+}
+
+#instructions {
+  margin-top: 425px;
+}
+
+.maze-cont {
+  width: 110%;
+  height: 100%;
+  background-color: white;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+
+  input,
+  select {
+    width: 120px;
+  }
+}

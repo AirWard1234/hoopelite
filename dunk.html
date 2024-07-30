@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dunk.css" type="text/css" />
+    <link rel="stylesheet" href="nav.css" type="text/css" />
+    <title>DUNK</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="navBarContainer">
+        <div id="logo">
+          <img src="Images/logo.png" />
+        </div>
+        <div id="navTable">
+          <table id="navTableElement">
+            <tr>
+              <td id="homeNav">
+                <a href="index.html">Home</a>
+              </td>
+              <td id="newsNav">
+                <a href="news.html">News</a>
+              </td>
+              <td id="infoNav">
+                <a href="info.html">Info</a>
+              </td>
+              <td id="gamesNav">
+                <button><a href="games.html">Games</a></button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="background">
+        <img src="Images/diceback.jpg" />
+      </div>
+
+      <div class="infopop" id="displayInfo">
+        <h1>HOW TO PLAY?</h1>
+        <p>
+          This is a super duper complex game, so please pay attention!
+          Basically, the first step is to roll exactly a 10 with the dice, not
+          one over, not one under. Then after you have done that, another game
+          will pop up. You must complete the game with an 80% accuracy. Once it
+          is complete, you will perform and awesome dunk!
+        </p>
+        <button type="button" class="closepop" onclick="hideInfo()">X</button>
+      </div>
+
+      <div class="gameMonitor">
+        <div class="dice-container">
+          <div class="dice"></div>
+        </div>
+        <button type="button" class="btn-roll-dice">DUNK</button>
+      </div>
+
+      <div id="Message-Container">
+        <div id="message">
+          <h1>Congratulations!</h1>
+          <p>You are done.</p>
+          <p id="moves"></p>
+          <input
+            id="okBtn"
+            type="button"
+            onclick="toggleVisablity('Message-Container')"
+            value="Cool!"
+          />
+        </div>
+      </div>
+
+      <div class="maze-cont">
+        <div id="page">
+          <br />
+
+          <div id="menu">
+            <input
+              id="startMazeBtn"
+              type="button"
+              onclick="makeMaze()"
+              value="Start"
+            />
+          </div>
+
+          <div id="view">
+            <div id="mazeContainer">
+              <canvas
+                id="mazeCanvas"
+                class="border"
+                height="1100"
+                width="1100"
+              ></canvas>
+            </div>
+          </div>
+
+          <p id="instructions">Use arrow keys to move the key to the house!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="dunk.js" defer></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"
+  ></script>
+</html>

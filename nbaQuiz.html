@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="nbaQuizStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <nav>
+    <div class="navBarContainer">
+      <div id="logo">
+        <img src="Images/logo.png">
+      </div>
+      <div id="navTable">
+        <table id="navTableElement">
+          <tr>
+            <td id="homeNav">
+              <a href="index.html">Home</a>
+            </td>
+            <td id="newsNav">
+              <a href="news.html">News</a>
+            </td>
+            <td id="infoNav">
+              <a href="info.html">Info</a>
+            </td>
+            <td id="gamesNav">
+              <button><a href="games.html">Games</a></button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </nav>
+  <div class="indexContentContainer" id="quizContent">
+    <div id="homeScreen">
+      <div class="start" id="start">
+        <div class="box" id='boxl'></div>
+        <div class="box" id=boxr></div>
+        <button id="startQuizButton" onclick="nbaQuizGame()">
+          <span id="startText">Start</span>
+        </button>
+      </div>
+      <div class="nbalogo"></div>
+      <div class="gameScreen" id="homeScreenSelect">
+        <div class="homeScreenTitle">
+          <h1>
+            Choose Your Decade
+          </h1>
+        </div>
+        <div class="decadesContainer" id="decadesContainer">
+          <div class="decade" id="decade6080s">
+            <img
+              src="https://www.jsonline.com/gcdn/presto/2021/04/12/PMJS/22f3502c-f3ef-4f9c-8875-bf7a5b6c9e46-1970_MJS_Milwaukee_Bucks_Kareem_Abdul-Jabbar_Historical_Archive-1.jpg?crop=1784,1004,x0,y77"
+              alt="kareem abdul-jabbar">
+            <h2>
+              1960 - 1980s
+            </h2>
+          </div>
+          <div class="decade" id="decade8000s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKNGD4JYeuDBIPEqjPDn9ysAzFQmkhiQKLzw&s"
+              alt="MJ and Charles">
+            <h2>
+              1980s - 2000s
+            </h2>
+          </div>
+          <div class="decade" id="decade0010s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTighDgTSbTfVMu6Mrtg95sjMNPQbBjc-M_CA&s"
+              alt="paul pierce">
+            <h2>
+              2000s-2010s
+            </h2>
+          </div>
+          <div class="decade" id="decade1020s">
+            <img
+              src="https://www.kron4.com/wp-content/uploads/sites/11/2023/04/gettyimages-540881644-594x594-1.jpg?w=594"
+              alt="curry and LBJ">
+            <h2>
+              2010s - Present
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="gameScreen" id="difficultySelectContainer">
+        <div class="homeScreenTitle">
+          <h1>
+            Choose your Difficulty
+          </h1>
+        </div>
+        <div class="difficultySelect">
+          <div class="difficulty" id="easy">
+            <div class="diffImage">
+              <img class="diffImageE" id="kdImage"
+                src="https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MjAxNzczMTQ5OTUwMzIyNTQ4/usatsi_12657562_168390179_lowres.jpg">
+            </div>
+            <div class="diffText">
+              <h2>
+                Easy
+              </h2>
+            </div>
+          </div>
+          <div class="difficulty" id="medium">
+            <div class="diffImage">
+              <img class="diffImageE"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMZJdWobrXqsM4bNrgYhCXDCm9lX0v2k2gnw&s">
+            </div>
+            <div class="diffText">
+              <h2>
+                Medium
+              </h2>
+            </div>
+          </div>
+          <div class="difficulty" id="hard">
+            <div class="diffImage">
+              <img class="diffImageE"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA21SlQt9au9RiBEIVNqyZ0rEJjY9hSsGUTQ&s">
+            </div>
+            <div class="diffText">
+              <h2>
+                Hard
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <button id="back">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="gameScreen" id="questionDisplay">
+      <div class="homeScreenTitle">
+        <h2>
+          Get Ready Game Will Start In
+        </h2>
+      </div>
+      <div class="countDown" id="countDown">
+        <h2>
+          3
+        </h2>
+      </div>
+    </div>
+    <div class="gameScreen" id="questionPage">
+      <div class="questionTitle" id="questionTitle">
+        <h2>
+          Here is question one answer quick
+        </h2>
+      </div>
+      <div class="questionBar">
+        <div id="questionTime">
+          <button class="submitButton" id="submit">
+            <span>Submit</span>
+          </button>
+          <h2 class="submitText" id='submitText'>
+            Select an Answer
+          </h2>
+
+        </div>
+        <div class="questionImage">
+          <div class="cardImage">
+            <img src="" id="question__Image">
+            <div class="cardImage__content">
+              <p class="cardImage__title">Card Title
+              </p>
+              <p class="cardImage__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+            </div>
+          </div>
+        </div>
+        <div class="questionScore">
+
+        </div>
+      </div>
+      <div class="questionSelect">
+        <div class="question" id="questionOneE">
+          <div class="letter">
+            <h3>
+              A
+            </h3>
+          </div>
+          <div class="questionAsk" id="questionOne"></div>
+        </div>
+        <div class="question" id="questionTwoE">
+          <div class=" letter">
+            <h3>
+              B
+            </h3>
+          </div>
+          <div class="questionAsk" id="questionTwo"></div>
+        </div>
+        <div class="question" id="questionThreeE">
+          <div class="letter">
+            <h3>
+              C
+            </h3>
+          </div>
+          <div class="questionAsk" id="questionThree"></div>
+        </div>
+        <div class="question" id="questionFourE">
+          <div class="letter">
+            <h3>
+              D
+            </h3>
+          </div>
+          <div class="questionAsk" id="questionFour"></div>
+        </div>
+      </div>
+    </div>
+    <div class="gameScreen" id="gameOver">
+      <div class="homeScreenTitle">
+        <h2>
+          Game Over
+        </h2>
+      </div>
+      <div class="user__stat__container">
+        <div class="userRank">
+          <div class="scoreDisplay">
+            <div class="scoreGraphics">
+              <div class="scoreNumber" id="scoreNumber"></div>
+              <div class="fracLine"></div>
+              <div class="denom">
+                <h2>10</h2>
+              </div>
+            </div>
+          </div>
+          <div class="rankDisplay" id="rankDisplay"></div>
+        </div>
+        <div class="back">
+          <button id="backFinal">
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="nbaQuiz.js"></script>
+</body>
+
+</html>

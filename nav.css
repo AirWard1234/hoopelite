@@ -1,0 +1,77 @@
+:root {
+  --title-size: 40px;
+  --subtitle-size: 30px;
+  --general-text: 20px;
+  --main-color: #24252a;
+  --secondary-color: lightgray;
+  --third-color: whitesmoke;
+  --title-spacing: 2%;
+  --main-font-color: black;
+  --body-spacing: 1vw;
+  --creator-card-width: 30vw;
+  --creator-card-height: 70vh;
+  --creator-card-color: rgb(45, 45, 45);
+  --sigPlayer-Bg-Logo: url("https://www.mavs.com/wp-content/themes/mavs/images/logo.svg");
+  --sigPlayer-Bg-Color: lightblue;
+}
+
+.navBarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--main-color);
+  box-shadow: 0px 0px 10px 0.1vw black;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+#logo img {
+  margin-left: 8vw;
+  width: 20%;
+  height: 20%;
+}
+
+#navTable {
+  font-size: var(--subtitle-size);
+  text-align: center;
+  padding: 10px;
+  height: 50%;
+  margin-right: 8vw;
+}
+
+#navTableElement td {
+  padding-left: 2vw;
+}
+
+#gamesNav button {
+  color: white;
+  background-color: rgba(0, 136, 169, 1);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 0.6em;
+}
+
+#gamesNav button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+#navTableElement a {
+  text-decoration: none;
+  color: white;
+}
+
+#navTableElement a:hover {
+  color: #0088a9;
+  transition: 0.2s;
+}
+
+#navTableElement button a:hover {
+  color: white;
+}

@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --title-size: 40px;
+  --subtitle-size: 30px;
+  --general-text: 20px;
+  --main-color: #24252a;
+  --secondary-color: lightgray;
+  --third-color: whitesmoke;
+  --title-spacing: 2%;
+  --main-font-color: black;
+  --body-spacing: 1vw;
+  --creator-card-width: 30vw;
+  --creator-card-height: 70vh;
+  --creator-card-color: rgb(45, 45, 45);
+  --sigPlayer-Bg-Logo: url("https://www.mavs.com/wp-content/themes/mavs/images/logo.svg");
+  --sigPlayer-Bg-Color: lightblue;
+}
+
+.navBarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--main-color);
+  box-shadow: 0px 0px 10px 0.1vw black;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+#logo img {
+  margin-left: 8vw;
+  width: 20%;
+  height: 20%;
+}
+
+#navTable {
+  font-size: var(--subtitle-size);
+  text-align: center;
+  padding: 10px;
+  height: 50%;
+  margin-right: 8vw;
+}
+
+#navTableElement td {
+  padding-left: 2vw;
+}
+
+#gamesNav button {
+  color: white;
+  background-color: rgba(0, 136, 169, 1);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 0.6em;
+}
+
+#gamesNav button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+#navTableElement a {
+  text-decoration: none;
+  color: white;
+}
+
+#navTableElement a:hover {
+  color: #0088a9;
+  transition: 0.2s;
+}
+
+#navTableElement button a:hover {
+  color: white;
+}
+
+.indexContentContainer {
+  display: flex;
+  margin-top: 10vw;
+}
+
+.indexContentContainerNews {
+  margin-top: 10vh;
+}
+
+#indexContentContainerMain {
+  margin: 0px;
+}
+
+#leftContentContainer {
+  background-color: var(--third-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75vw;
+  border-right: solid 4px black;
+}
+
+.mainHeadContainer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  background-image: url("/Images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+  background-color: black;
+}
+
+.mainHeadTitle {
+  background-color: white;
+  grid-column: 2/8;
+  grid-row: 5;
+  font-size: 5vw;
+  padding: var(--body-spacing);
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5vh;
+  width: 50vw;
+  height: 110vh;
+}
+
+.introTitle {
+  height: 10vh;
+  font-size: var(--subtitle-size);
+  padding: var(--body-spacing);
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+@keyframes introSliding {
+  0% {
+    transition: 1s;
+    background-image: url("https://nbcsports.brightspotcdn.com/dims4/default/42d293d/2147483647/strip/true/crop/4021x2262+0+3/resize/1440x810!/format/webp/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F06%2F00%2F871dbef02bba82b825058344e4d7%2F541546870-e1466392616644.jpg");
+  }
+
+  25% {
+    transition: 1s;
+    background-image: url("https://www.usatoday.com/gcdn/media/USATODAY/USATODAY/2013/06/19/1371628032000-USATSI-7309477-1306190411_16_9.jpg?width=3200&height=1806&fit=crop&format=pjpg&auto=webp");
+  }
+
+  50% {
+    transition: 1s;
+    background-image: url("https://image-cdn.essentiallysports.com/wp-content/uploads/20200619174759/Shaqs-dunks.jpeg");
+  }
+
+  75% {
+    transition: 1s;
+    background-image: url("https://media.bleacherreport.com/w_800,h_533,c_fill/br-img-images/002/936/935/hi-res-eeb229e296ddb701be5c889a1d693762_crop_north.jpg");
+  }
+
+  100% {
+    transition: 1s;
+    background-image: url("https://nbcsports.brightspotcdn.com/dims4/default/42d293d/2147483647/strip/true/crop/4021x2262+0+3/resize/1440x810!/format/webp/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F06%2F00%2F871dbef02bba82b825058344e4d7%2F541546870-e1466392616644.jpg");
+
+  }
+}
+
+.introImage {
+  height: 60vh;
+  background-color: dimgray;
+  background-image: none;
+  background-position: center;
+  background-size: 50vw 60vh;
+  background-repeat: no-repeat;
+  transition: 0.1s ease-in-out;
+  animation: introSliding 10s steps(80) infinite;
+}
+
+.introText {
+  height: 30vh;
+  font-size: var(--general-text);
+  padding: var(--body-spacing);
+  padding-left: 0;
+  line-height: 3vh;
+  text-align: justify;
+  margin-top: 2vh;
+}
+
+#rightContentContainer {
+  background-color: var(--secondary-color);
+  padding: var(--body-spacing);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+}
+
+.mainHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.rightContentTitle {
+  display: flex;
+  align-items: left;
+  font-size: var(--subtitle-size);
+  margin-bottom: 10vh;
+  width: 25vw;
+
+}
+
+.mainBodyText {
+  width: 55vw;
+  height: 98vh;
+  background-color: var(--secondary-color);
+  border-radius: 1%;
+  margin-top: 5vh;
+}
+
+.sideBodyText {
+  width: 35vw;
+  height: 98vh;
+  background-color: var(--third-color);
+  border-radius: 1%;
+  margin-top: 5vh;
+}
+
+#creatorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+}
+
+.creatorCard {
+  display: flex;
+  position: relative;
+  width: var(--creator-card-width);
+  height: var(--creator-card-height);
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--creator-card-color);
+  z-index: 1;
+}
+
+.creatorCard:hover {
+  text-decoration: underline cyan;
+
+}
+
+#hani::before {
+  content: '';
+  display: block;
+  background-image: url("https://cdn.freebiesupply.com/images/large/2x/dallas-mavericks-logo-black-and-white.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+
+#sandro::before {
+  content: '';
+  display: block;
+  background-image: url("https://i.ebayimg.com/images/g/y-EAAOSwbThiWa~P/s-l1600.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.topHalfCard {
+  display: flex;
+  flex-direction: row;
+  width: var(--creator-card-width);
+  height: calc(--creator-card-height / 2);
+}
+
+.creatorImage {
+  width: calc(var(--creator-card-width)/2);
+  height: calc(var(--creator-card-height)/2);
+  background-color: var(--third-color);
+}
+
+.creatorName {
+  width: calc(var(--creator-card-width)/2);
+  height: calc(var(--creator-card-height)/2);
+  padding: var(--body-spacing);
+  color: var(--third-color);
+  line-height: calc(var(--body-spacing)*2);
+}
+
+.creatorName ul {
+  padding-left: var(--body-spacing);
+  font-size: var(--general-text);
+}
+
+.creatorName h2 {
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+.creatorName li {
+  margin-bottom: var(--body-spacing);
+}
+
+.bottomHalfCard {
+  width: calc(var(--creator-card-width)*.8);
+  height: calc(var(--creator-card-height)/2);
+  font-size: var(--general-text);
+  color: var(--third-color);
+  padding: var(--body-spacing);
+  line-height: 150%;
+}
+
+.creatorCardGreeting {
+  margin-bottom: 2vw;
+  font-weight: bolder;
+}
+
+
+.Container {
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  /* Arrange items vertically */
+}
+
+.player {
+  width: 60vw;
+  height: 30vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(20, 3vw);
+  grid-template-rows: repeat(10, 3vh);
+  justify-content: center;
+  margin-top: 20vh;
+  margin-left: 20vw;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.rotationButton {
+  grid-row: 2/10;
+  grid-column: 18;
+}
+
+#nextPlayer {
+  height: 100%;
+  width: 5vw;
+  border-radius: 10px;
+  background-color: rgba(0, 136, 169, 1);
+  font-size: 3em;
+  color: white;
+  border: 0px;
+  cursor: pointer;
+}
+
+#nextPlayer:hover {
+  background-color: rgb(1, 106, 132);
+  transition: 0.2s;
+}
+
+.playerImage {
+  background-color: var(--third-color);
+  margin: 2vh;
+  grid-row: 1/11;
+  grid-column: 1/8;
+}
+
+.Headshot {
+  width: 100%;
+  height: 100%;
+}
+
+#playerName {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  grid-row: 2;
+  grid-column: 9;
+  background-color: white;
+  font-weight: 100;
+  width: 14vw;
+}
+
+
+
+.teamLogo {
+  border-radius: 100%;
+  grid-row: 2;
+  margin: 0;
+  grid-column: 14;
+  align-self: center;
+  margin-top: 4vh;
+  margin-left: 4vh;
+}
+
+.teamLogo img {
+  width: 3vw;
+  height: 6vh;
+}
+
+.playerPosition {
+  font-family: "Montserrat", sans-serif;
+  grid-row: 5;
+  grid-column: 9/18;
+  background-color: white;
+}
+
+.playerPosition h4 {
+  width: 15vw;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.playerStats {
+  width: 20vw;
+  height: 10vh;
+  grid-row: 6;
+  grid-column: 9;
+}
+
+.playerStats img {
+  width: 100%;
+  height: 100%;
+}
+
+.rotateContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@keyframes newSliding {
+  0% {
+    transition: 1s;
+    transform: translateX(90%);
+  }
+
+  50% {
+    transition: 1s;
+    transform: translateX(-90%);
+  }
+
+  100% {
+    transition: 1s;
+    transform: translateX(90%);
+  }
+}
+
+.articles {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10vw;
+}
+
+
+.article {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 25vw;
+  height: 100%;
+  margin-left: 2vw;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: newSliding 40s linear infinite;
+}
+
+.articleR {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 25vw;
+  height: 100%;
+  margin-left: 2vw;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+.articles img {
+  width: 80%;
+  height: 35%;
+  margin: 1.5vw;
+}
+
+.articles h1 {
+  color: black;
+  background-color: white;
+  font-size: 1.5em;
+  margin: 1.5vw;
+}
+
+.article:hover {
+  cursor: pointer;
+  width: 25rem;
+  transition: 0.2s;
+}
+
+.articleImage {
+  width: 80%;
+  height: 50%;
+  background-color: var(--third-color);
+  margin-bottom: 3vw;
+}
+
+.articleText {
+  font-size: var(--general-text);
+  margin-bottom: 4vw;
+}
+
+.sideBarPreview {
+  width: 80%;
+  height: 40vh;
+  background-color: var(--third-color);
+  margin-bottom: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding-top: var(--body-spacing);
+}
+
+.sideBarTitle {
+  width: 90%;
+  height: 10%;
+}
+
+.sideBarBody {
+  width: 90%;
+  height: 20%;
+}
+
+.gameLibraryContainer {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.gameSquare {
+  width: 25vw;
+  height: 25vw;
+  margin: 10px;
+  background-color: grey;
+}
+
+.gameSquare h1 {
+  background-color: white;
+}
+
+.gameSquare p {
+  background-color: white;
+}
+
+.gameSquareImage {
+  background-color: navy;
+  width: 100%;
+  height: 85%;
+  opacity: 0.5;
+  transition: 0.05s;
+}
+
+.gameSquareImage:hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.gameSquareImage:active {
+  opacity: 0.6;
+}
+
+.gameSquare a {
+  text-decoration: none;
+}

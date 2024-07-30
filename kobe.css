@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.kobe__game__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__screen {
+  width: 60vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 10px solid black;
+}
+
+#kobe__screen {
+  background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*XtlLx7lVeWbJLJdnFJ2aRQ.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main__title {
+  margin-top: 1vw;
+  font-family: fantasy;
+  font-size: 3em;
+  font-style: oblique;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 2px 2px 5px gold, 2px 2px 10px darkgoldenrod;
+  }
+
+  to {
+    text-shadow: 2px 2px 5px violet, 2px 2px 20px darkviolet;
+  }
+}
+
+#kobe__button__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info button {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#info svg {
+  width: 80%;
+}
+
+#info path {
+  fill: black;
+}
+
+#settings button {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#settings svg {
+  width: 100%;
+}
+
+#settings path {
+  fill: black;
+}
+
+.start button {
+  background: transparent;
+  border: none;
+  border-radius: 10px 10px;
+  background: gold;
+  border-bottom: 6px solid darkgoldenrod;
+  outline: 4px solid black;
+  padding: 1vw;
+  font-size: 2em;
+  margin-bottom: 10vh;
+  transition: 0.5s ease;
+}
+
+#kobe__button__container button {
+  width: 50%;
+  height: 50%;
+}
+
+.start button span {
+  letter-spacing: 1em;
+}
+
+.start button:hover {
+  transform: scale(1.1);
+}
+
+.start button:active {
+  border-bottom: 0;
+}
+
+.start svg {
+  height: 40%;
+}
+
+#select__screen {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  background-image: url("https://croucharts.com/cdn/shop/products/Kobe-Bryant_800x.jpg?v=1679519493");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image__cover {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: relative;
+  z-index: 0;
+}
+
+.select__screen__container {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.game__title {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__column {
+  height: 80%;
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.game__container__center {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.game__level__side {
+  transform: scale(0.8);
+  border-radius: 10px;
+}
+
+.game__level__main {
+  border-radius: 10px;
+}
+
+.main__game__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5vw;
+  width: 45vw;
+}
+
+.main__game__container button {
+  margin: 2vw;
+}
+
+.game__title {
+  font-size: 2em;
+  margin-top: 2vh;
+}
+
+.game__desc {
+  margin-bottom: 5vh;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.game__desc span {
+  font-weight: normal;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 35vh;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, gold, darkgoldenrod);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, gold, darkgoldenrod);
+  filter: blur(30px);
+}
+
+.card b {
+  position: absolute;
+  inset: 6px;
+  z-index: 2;
+}
+
+
+.card .content {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  transform: scale(1);
+  bottom: 25px;
+}
+
+.content .title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content .title span {
+  font-weight: 300;
+  font-size: 0.90em;
+}
+
+.title {
+  background-color: black;
+  padding: 5px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.button__move button {
+  background-color: transparent;
+  display: flex;
+  align-content: center;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 5em;
+  font-family: cursive;
+  color: white;
+  text-shadow: gold 3px 3px 10px;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s ease;
+}
+
+.button__move button:hover {
+  transform: scale(1.1);
+  text-shadow: palegoldenrod 10px 10px 20px;
+}
+
+.button__move button:active {
+  text-shadow: darkgoldenrod 3px 3px 10px;
+  transform: scale(0.9);
+}
+
+.select__image {
+  width: 95%;
+  height: 95%;
+  position: relative;
+  z-index: 1;
+}
+
+#game__screen {
+  display: none;
+}
+
+.game__container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+
+.game__view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  position: relative;
+  z-index: -1;
+  grid-row: 1;
+  grid-column: 1;
+  background-image: url("");
+}
+
+.game__option {
+  width: 20%;
+  height: 30%;
+  background-color: grey;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.game__pick {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+  z-index: 1;
+}

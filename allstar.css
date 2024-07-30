@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:500');
+
+.start {
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: row;
+  margin-top: 25vh;
+  margin-left: 9vw;
+}
+
+.gamemode {
+  background-color: blue;
+  width: 35vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+}
+
+.gamemode img {
+  width: 500%;
+  height: 107%;
+  display: block;
+}
+
+.gamemode .name {
+  width: 80%;
+  height: 23%;
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.gamemode h1 {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  font-size: 3em;
+  grid-column: 2 / 8;
+  grid-row: 2 / 6;
+}
+
+.start a {
+  text-decoration: none;
+  color: black;
+}
+
+.gamemode:hover {
+  width: 36vw;
+
+}
