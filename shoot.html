@@ -5,19 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="shoot.css" />
+    <link rel="stylesheet" type="text/css" href="nav.css" />
     <title>Shoot</title>
   </head>
 
   <body>
-    <div class="display">
-      <div class="gameplay"></div>
-
-      <div class="shotmeter">
-        <div id="scorebox"></div>
-        <div id="shotbox"></div>
+    <nav>
+      <div class="navBarContainer">
+        <div id="logo">
+          <img src="Images/logo.png" />
+        </div>
+        <div id="navTable">
+          <table id="navTableElement">
+            <tr>
+              <td id="homeNav">
+                <a href="index.html">Home</a>
+              </td>
+              <td id="newsNav">
+                <a href="news.html">News</a>
+              </td>
+              <td id="infoNav">
+                <a href="info.html">Info</a>
+              </td>
+              <td id="gamesNav">
+                <button><a href="games.html">Games</a></button>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
+    </nav>
+    <div class="container">
+      <div class="display">
+        <div class="gameplay">
+          <div class="background">
+            <img src="shootbackground.jpg" />
+            <div class="net">
+              <div class="netbox"></div>
+            </div>
+            <div id="ball">
+              <img src="shootball.png" />
+            </div>
+          </div>
+          <div class="score">
+            <p id="scorecount">Score: 0</p>
+          </div>
+        </div>
 
-      <button type="button">SHOOT</button>
+        <div class="shotmeter">
+          <canvas> </canvas>
+          <!--<div id="scorebox" style="z-index: -1"></div>-->
+        </div>
+
+        <button
+          type="button"
+          onclick="shootBall()"
+          class="shootbtn"
+          id="shootbtn"
+        >
+          SHOOT
+        </button>
+      </div>
     </div>
   </body>
+
+  <script type="text/javascript" src="shoot.js"></script>
 </html>
